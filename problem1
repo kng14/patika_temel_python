@@ -1,0 +1,20 @@
+input = [[1,'a',['cat'],2],[[[3]],'dog'],4,5]
+#Girdi degerlerimizi belirledik
+flat_list = [] #list olusturduk
+
+# function
+def flatten_list(input):
+    
+    for element in input:
+        # listi kontol edecegiz
+        if type(element) == list:
+           
+            flatten_list(element)
+        else:
+            flat_list.append(element)
+
+
+flatten_list(input)
+
+
+print(flat_list) 
